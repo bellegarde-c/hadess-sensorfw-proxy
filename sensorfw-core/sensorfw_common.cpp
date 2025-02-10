@@ -135,6 +135,7 @@ void repowerd::Sensorfw::run_socket_reader()
             }
         }
     });
+    g_warning("exit");
 }
 
 void repowerd::Sensorfw::request_sensor()
@@ -204,6 +205,7 @@ void repowerd::Sensorfw::start()
 
     m_running = true;
 
+    g_warning("start: %b", read_loop.joinable());
     if (!read_loop.joinable())
         run_socket_reader();
 
