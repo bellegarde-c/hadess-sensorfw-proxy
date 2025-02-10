@@ -100,7 +100,7 @@ const char* repowerd::Sensorfw::plugin_path() const
 bool repowerd::Sensorfw::load_plugin()
 {
     int constexpr timeout_default = 100;
-    auto const error;
+    GError *error;
     auto const result =  g_dbus_connection_call_sync(
             dbus_connection,
             dbus_sensorfw_name,
