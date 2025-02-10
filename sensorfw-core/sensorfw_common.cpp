@@ -116,6 +116,7 @@ bool repowerd::Sensorfw::load_plugin()
 
     if (!result)
     {
+        g_warning("%s", error->message);
         log->log(log_tag, "failed to call load_plugin");
         return false;
     }
