@@ -135,7 +135,7 @@ void repowerd::Sensorfw::run_socket_reader()
             }
         }
     });
-    g_warning("exit");
+    g_warning("exit: %s", plugin_string());
 }
 
 void repowerd::Sensorfw::request_sensor()
